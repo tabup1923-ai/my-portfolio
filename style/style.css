@@ -157,3 +157,33 @@ table {
   display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
+/*# ここからスタート*/
+header {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  align-items: flex-start; 
+  padding: 40px;          
+  box-sizing: border-box;
+  gap: 138px;
+
+  background-image: url("../image/niku.jpg"); 
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;    
+}
+.headermenu {
+  margin: 0;
+  padding: 0;
+}
+.menu-item {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+.menu-item a {
+  color: #ffffff;         /* 文字色を白に */
+  text-decoration: none;  /* 下線を消す */
+  font-weight: bold;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
