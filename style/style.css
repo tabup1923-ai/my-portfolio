@@ -236,3 +236,60 @@ header {
     width: auto;
     border-radius: 4px;
 }
+/* セクション全体の余白など */
+.main {
+    padding: 60px 40px;
+}
+
+.h2_title {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* HTMLの div（カード部分）のスタイル */
+.main > div {
+    background-color: #121212; /* 黒いカードの背景 */
+    width: 340px;              /* カードの横幅 */
+    padding: 30px;
+    border-radius: 12px;       /* 角丸 */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 画像のスタイル */
+.main > div img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* 1つ目のpタグ（$40） */
+.main > div p:nth-of-type(1) {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 2つ目のpタグ（Whole Grain Bread） */
+.main > div p:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* 「Add」ボタンを右側に寄せるスタイル */
+.main > div .add-btn {
+    background-color: #933C24;
+    color: #ffffff;
+    border: none;
+    padding: 10px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-end; /* 右側に配置 */
+}
