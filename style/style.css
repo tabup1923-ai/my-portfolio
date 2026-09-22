@@ -237,30 +237,40 @@ header {
     border-radius: 4px;
 }
 /* セクション全体の余白など */
+/* セクション全体の余白など */
 .main {
     padding: 60px 40px;
 }
 
 .h2_title {
-    color: #ffffff;
+    color: #111111;
     font-size: 36px;
     margin-bottom: 40px;
 }
 
-/* HTMLの div（カード部分）のスタイル */
-.main > div {
-    background-color: #121212; /* 黒いカードの背景 */
-    width: 340px;              /* カードの横幅 */
+/* グリッド全体の箱 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に等幅で並べる */
+    gap: 30px; /* カード同士の間隔 */
+    max-width: 1200px; /* 広がりすぎないように最大幅を設定 */
+    margin: 0 auto;    /* 中央寄せ */
+}
+
+/* 各カードのスタイル（product-gridの中にあるdiv） */
+.product-grid > div {
+    background-color: #121212; 
     padding: 30px;
-    border-radius: 12px;       /* 角丸 */
+    border-radius: 12px;       
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    width: 100%;               
 }
 
-/* 画像のスタイル */
-.main > div img {
+/* カード内の画像のスタイル */
+.product-grid > div img {
     width: 100%;
     height: 220px;
     object-fit: contain;
@@ -268,21 +278,21 @@ header {
 }
 
 /* 1つ目のpタグ（$40） */
-.main > div p:nth-of-type(1) {
+.product-grid > div p:nth-of-type(1) {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* 2つ目のpタグ（Whole Grain Bread） */
-.main > div p:nth-of-type(2) {
+/* 2つ目のpタグ（商品名） */
+.product-grid > div p:nth-of-type(2) {
     font-size: 20px;
     line-height: 1.3;
     margin-bottom: 25px;
 }
 
-/* 「Add」ボタンを右側に寄せるスタイル */
-.main > div .add-btn {
+/* 「Add」ボタンのスタイル */
+.product-grid > div .add-btn {
     background-color: #933C24;
     color: #ffffff;
     border: none;
@@ -291,5 +301,6 @@ header {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    align-self: flex-end; /* 右側に配置 */
+    align-self: flex-end; 
+    margin-top: auto; /* ボタンを一番下に綺麗に揃える */
 }
