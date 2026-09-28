@@ -159,17 +159,12 @@ table {
 /*# sourceMappingURL=style.css.map */
 /*# ここからスタート*/
 header {
-  display: flex;
+display: flex;
   width: 100%;
   align-items: flex-start;
   padding: 40px;
   box-sizing: border-box;
   gap: 138px;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
 
 .headermenu {
@@ -192,7 +187,7 @@ header {
 
 /* メインビジュアル（ヘッダーの裏に潜り込ませる） */
 .kv {
-  width: 100%;
+ width: 100%;
   min-height: 100vh;
   background-image: url("../image/niku.jpg"); 
   background-size: cover;     
@@ -236,8 +231,6 @@ header {
     width: auto;
     border-radius: 4px;
 }
-/* セクション全体の余白など */
-/* セクション全体の余白など */
 .main {
     padding: 60px 40px;
 }
@@ -246,6 +239,9 @@ header {
     color: #111111;
     font-size: 36px;
     margin-bottom: 40px;
+    text-align: center;
+    font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
+    font-style: italic;
 }
 
 /* グリッド全体の箱 */
