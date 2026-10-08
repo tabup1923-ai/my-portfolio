@@ -162,9 +162,10 @@ header {
 display: flex;
   width: 100%;
   align-items: flex-start;
-  padding: 40px;
+  padding: 0px;
   box-sizing: border-box;
   gap: 138px;
+  margin-bottom: auto;
 }
 
 .headermenu {
@@ -382,17 +383,56 @@ align-self: center;   /* 縦の真ん中 */
 .h3_title {
     color: #111111;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* タイトルとメニューの隙間を少し詰める */
     text-align: center;
     font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
     font-style: italic;
+}
+
+/* ▼ メニュー全体を横並び・中央寄せにする設定 */
+.filter-menu {
+    display: flex;
+    justify-content: center; /* 横方向の真ん中 */
+    gap: 30px;               /* メニュー同士の間隔 */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px auto; /* 下側にカードとの隙間を開ける */
+    border-bottom: 1px solid #eaeaea; /* 2枚目にある薄い横線 */
+    max-width: 600px;
+    padding-bottom: 15px;
+}
+
+/* 各メニューのリンク文字のスタイル */
+.filter-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* 2枚目の「Cake」みたいに選択されているものの下に赤い下線を出す場合 */
+.filter-menu a.active {
+    color: #933C24; /* サイトのテーマカラーの茶色 */
+    font-weight: bold;
+}
+
+.filter-menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #933C24; /* 下線の色 */
 }
 .product2-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3列に等幅で並べる */
     gap: 30px; /* カード同士の間隔 */
     max-width: 1200px; /* 広がりすぎないように最大幅を設定 */
-    margin: 0 auto;    /* 中央寄せ */
+    margin: 0 auto 80px auto;   /* 中央寄せ */
 }
 
 /* 各カードのスタイル（product-gridの中にあるdiv） */
@@ -404,4 +444,90 @@ align-self: center;   /* 縦の真ん中 */
     display: flex;
     flex-direction: column;
     width: 100%;               
+}
+.banner-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+align-self: center;   /* 縦の真ん中 */
+    justify-self: center; /* 横の真ん中 */
+    text-align: center;   /* 中の文字も中央揃えにする */
+    max-width: 600px;
+}
+
+/* 1つ目のpタグ（見出し） */
+/* セクション全体 */
+.hh33 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 130px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* カード全体をGridにして写真とテキストを重ねる */
+.hh3-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 背景の写真 */
+.hh3-img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* テキスト全体の箱（真ん中寄せ・中央揃え） */
+.banner2-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+    align-self: center;   /* 縦の真ん中 */
+    justify-self: center; /* 横の真ん中 */
+    text-align: center;   /* 中の文字をすべて中央揃え */
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+/* 「About us」の見出し */
+.banner2-text > p:nth-of-type(1) {
+    font-size: 48px;
+    font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
+    font-style: italic;
+    color: #ffffff;      /* 写真が暗いので白にすると映える（元の茶色が良い場合は #d48a70 などにしてね） */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner2-text > p:nth-of-type(1) span {
+    display: block;
+}
+
+/* 説明文 */
+.banner2-text > p:nth-of-type(2) {
+    font-size: 20px;      /* 少しサイズを整えるとお手本っぽくなるよ */
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Read More ボタン */
+.banner2-btn {
+    display: inline-block;
+    background-color: #933C24;
+    color: #ffffff;
+    padding: 12px 28px;
+    font-size: 18px;      /* ボタンの文字サイズもお好みで調整してね */
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
