@@ -238,7 +238,7 @@ display: flex;
 
 .h2_title {
     color: #111111;
-    font-size: 36px;
+    font-size: 64px;
     margin-bottom: 40px;
     text-align: center;
     font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
@@ -341,7 +341,7 @@ display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     z-index: 2;
-align-self: center;   /* 縦の真ん中 */
+    align-self: center;   /* 縦の真ん中 */
     justify-self: center; /* 横の真ん中 */
     text-align: center;   /* 中の文字も中央揃えにする */
     max-width: 600px;
@@ -382,11 +382,12 @@ align-self: center;   /* 縦の真ん中 */
 }
 .h3_title {
     color: #111111;
-    font-size: 36px;
+    font-size: 64px;
     margin-bottom: 20px; /* タイトルとメニューの隙間を少し詰める */
     text-align: center;
     font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
     font-style: italic;
+    margin-top: 130px;
 }
 
 /* ▼ メニュー全体を横並び・中央寄せにする設定 */
@@ -449,14 +450,11 @@ align-self: center;   /* 縦の真ん中 */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     z-index: 2;
-align-self: center;   /* 縦の真ん中 */
+    align-self: center;   /* 縦の真ん中 */
     justify-self: center; /* 横の真ん中 */
     text-align: center;   /* 中の文字も中央揃えにする */
     max-width: 600px;
 }
-
-/* 1つ目のpタグ（見出し） */
-/* セクション全体 */
 .hh33 {
     width: 100%;
     max-width: 1200px;
@@ -501,7 +499,7 @@ align-self: center;   /* 縦の真ん中 */
     font-size: 48px;
     font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
     font-style: italic;
-    color: #ffffff;      /* 写真が暗いので白にすると映える（元の茶色が良い場合は #d48a70 などにしてね） */
+    color: #4a2c1d;
     line-height: 1.2;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -513,8 +511,8 @@ align-self: center;   /* 縦の真ん中 */
 
 /* 説明文 */
 .banner2-text > p:nth-of-type(2) {
-    font-size: 20px;      /* 少しサイズを整えるとお手本っぽくなるよ */
-    color: #e0e0e0;
+    font-size: 24px;      
+    color: #2b2b2b;
     line-height: 1.6;
     margin-bottom: 25px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -526,7 +524,7 @@ align-self: center;   /* 縦の真ん中 */
     background-color: #933C24;
     color: #ffffff;
     padding: 12px 28px;
-    font-size: 18px;      /* ボタンの文字サイズもお好みで調整してね */
+    font-size: 24px;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
