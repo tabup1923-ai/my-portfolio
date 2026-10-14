@@ -161,7 +161,7 @@ table {
 header {
 display: flex;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   box-sizing: border-box;
   gap: 138px;
@@ -528,4 +528,37 @@ display: flex;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+/* 各カードのスタイル（product-gridの中にあるdiv） */
+.product4-grid4> div {
+    background-color: #121212; 
+    padding: 30px;
+    border-radius: 12px;       
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;               
+}
+
+/* カード内の画像のスタイル */
+.product4-grid > div img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* 1つ目のpタグ */
+.product4-grid > div p:nth-of-type(1) {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 2つ目のpタグ */
+.product-grid > div p:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 25px;
 }
