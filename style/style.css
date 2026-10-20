@@ -160,12 +160,17 @@ table {
 /*# ここからスタート*/
 header {
 display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 0px;
-  box-sizing: border-box;
-  gap: 138px;
-  margin-bottom: auto;
+width: 100%;
+align-items: center;
+padding: 0px;
+box-sizing: border-box;
+gap: 138px;
+margin-bottom: auto;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
 }
 
 .headermenu {
@@ -186,7 +191,7 @@ display: flex;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* メインビジュアル（ヘッダーの裏に潜り込ませる） */
+/* メインビジュアル */
 .kv {
  width: 100%;
   min-height: 100vh;
@@ -248,13 +253,13 @@ display: flex;
 /* グリッド全体の箱 */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列に等幅で並べる */
-    gap: 30px; /* カード同士の間隔 */
-    max-width: 1200px; /* 広がりすぎないように最大幅を設定 */
-    margin: 0 auto;    /* 中央寄せ */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto;
 }
 
-/* 各カードのスタイル（product-gridの中にあるdiv） */
+/* 各カードのスタイル*/
 .product-grid > div {
     background-color: #121212; 
     padding: 30px;
@@ -299,7 +304,7 @@ display: flex;
     border-radius: 6px;
     cursor: pointer;
     align-self: flex-end; 
-    margin-top: auto; /* ボタンを一番下に綺麗に揃える */
+    margin-top: auto;
 }
 .hh22 {
     width: 100%;
@@ -333,7 +338,7 @@ display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1; /* 写真の上、文字の下に配置 */
+    z-index: 1;
 }
 
 /* ▼ まとめて画像の上に重ねる箱 */
@@ -341,9 +346,9 @@ display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     z-index: 2;
-    align-self: center;   /* 縦の真ん中 */
-    justify-self: center; /* 横の真ん中 */
-    text-align: center;   /* 中の文字も中央揃えにする */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
     max-width: 600px;
 }
 
@@ -383,7 +388,7 @@ display: flex;
 .h3_title {
     color: #111111;
     font-size: 64px;
-    margin-bottom: 20px; /* タイトルとメニューの隙間を少し詰める */
+    margin-bottom: 20px;
     text-align: center;
     font-family: "Playfair Display", "Times New Roman", "Yu Mincho", serif;
     font-style: italic;
@@ -393,12 +398,12 @@ display: flex;
 /* ▼ メニュー全体を横並び・中央寄せにする設定 */
 .filter-menu {
     display: flex;
-    justify-content: center; /* 横方向の真ん中 */
-    gap: 30px;               /* メニュー同士の間隔 */
+    justify-content: center;
+    gap: 30px;
     list-style: none;
     padding: 0;
-    margin: 0 auto 40px auto; /* 下側にカードとの隙間を開ける */
-    border-bottom: 1px solid #eaeaea; /* 2枚目にある薄い横線 */
+    margin: 0 auto 40px auto;
+    border-bottom: 1px solid #eaeaea;
     max-width: 600px;
     padding-bottom: 15px;
 }
@@ -415,7 +420,7 @@ display: flex;
 
 /* 2枚目の「Cake」みたいに選択されているものの下に赤い下線を出す場合 */
 .filter-menu a.active {
-    color: #933C24; /* サイトのテーマカラーの茶色 */
+    color: #933C24;
     font-weight: bold;
 }
 
@@ -430,10 +435,10 @@ display: flex;
 }
 .product2-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列に等幅で並べる */
-    gap: 30px; /* カード同士の間隔 */
-    max-width: 1200px; /* 広がりすぎないように最大幅を設定 */
-    margin: 0 auto 80px auto;   /* 中央寄せ */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
 }
 
 /* 各カードのスタイル（product-gridの中にあるdiv） */
@@ -450,9 +455,9 @@ display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     z-index: 2;
-    align-self: center;   /* 縦の真ん中 */
-    justify-self: center; /* 横の真ん中 */
-    text-align: center;   /* 中の文字も中央揃えにする */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
     max-width: 600px;
 }
 .hh33 {
@@ -487,9 +492,9 @@ display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     z-index: 2;
-    align-self: center;   /* 縦の真ん中 */
-    justify-self: center; /* 横の真ん中 */
-    text-align: center;   /* 中の文字をすべて中央揃え */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
     max-width: 600px;
     padding: 0 20px;
 }
@@ -542,18 +547,18 @@ display: flex;
 /* 3つのカードを綺麗に横並びにするグリッド */
 .product4-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列に等幅で並べる */
-    gap: 30px;                             /* カード同士の間隔 */
-    max-width: 1200px;                     /* 広がりすぎないように最大幅を設定 */
-    margin: 0 auto;                        /* 中央寄せ */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 /* 各カードのスタイル */
 .product4-card {
-    background-color: #ffffff;             /* 背景を白にする（必要に応じて調整してね） */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;       
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 影をスッキリさせる */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     width: 100%;               
@@ -563,7 +568,7 @@ display: flex;
 .product4-img {
     width: 100%;
     height: 220px;
-    object-fit: cover;         /* 画像が綺麗に枠に収まるようにする */
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
