@@ -7,33 +7,30 @@
     <title>My Portfolio</title>
 </head>
 <body>
-<section class="kv">
-    <header class="kv__header">
-        <img src="./image/Modrino.png" alt="Modrino" class="kv__logo">
-        
-        <nav class="kv__nav">
-            <ul class="kv__menu">
-                <li class="kv__menu-item"><a href="#" class="kv__link">HOME</a></li>
-                <li class="kv__menu-item"><a href="#" class="kv__link">Blog</a></li>
-                <li class="kv__menu-item"><a href="#" class="kv__link">Contact Us</a></li>
-                <li class="kv__menu-item"><a href="#" class="kv__link">Services</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- メインビジュアルのテキストコンテンツ -->
-    <p class="kv__subtitle">Delicious Cafe</p>
-    
-    <h1 class="kv__title">
-        Sweet Treats,<br>
-        Perfect Eats
-    </h1>
-    
-    <a href="#" class="kv__btn">Shop now</a>
-</section>
-
+<header class="kv__header">
+    <nav class="kv__nav">
+        <ul class="kv__menu">
+            <li class="kv__menu-item"><a href="#" class="kv__link">HOME</a></li>
+            <li class="kv__menu-item"><a href="#" class="kv__link">Blog</a></li>
+            <li class="kv__menu-item"><a href="#" class="kv__link">Contact Us</a></li>
+            <li class="kv__menu-item"><a href="#" class="kv__link">Services</a></li>
+        </ul>
+    </nav>
+</header>
  <main class="main-content">
+    <section class="kv">
+        <img src="./image/Modrino.png" alt="Modrino" class="kv__logo">
+
+        <!-- メインビジュアルのテキストコンテンツ -->
+        <p class="kv__subtitle">Delicious Cafe</p>
     
+        <h1 class="kv__title">
+            Sweet Treats,<br>
+            Perfect Eats
+        </h1>
+    
+        <a href="#" class="kv__btn">Shop now</a>
+    </section>
     <!-- 1. Top Products セクション -->
     <section class="products">
         <h2 class="products__title">Top Products</h2>
@@ -108,7 +105,7 @@
     </section>
 
     <!-- 2. バナーセクション (20% Off) -->
-    <section class="promo-banner">
+    <div class="promo-banner">
         <div class="promo-banner__card">
             <img src="image/hurutu.jpg" alt="バナー" class="promo-banner__img">
             <div class="promo-banner__text">
@@ -117,11 +114,11 @@
                 <a href="#" class="promo-banner__btn">Learn More</a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 3. Explore More セクション -->
     <section class="explore">
-        <h3 class="explore__title">Explore More</h3>
+        <h2 class="explore__title">Explore More</h2>
         
         <nav class="explore__nav">
             <ul class="explore__menu">
@@ -145,7 +142,7 @@
     </section>
 
     <!-- 4. About Us バナーセクション -->
-    <section class="about-banner">
+    <div class="about-banner">
         <div class="about-banner__card">
             <img src="image/godsfavoriteart-CSeDkm1MyQQ-unsplash.jpg" alt="バナー" class="about-banner__img">
             <div class="about-banner__text">
@@ -154,11 +151,11 @@
                 <a href="#" class="about-banner__btn">Read More</a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 5. Featured Treats セクション -->
     <section class="treats">
-        <h4 class="treats__title">Featured Treats</h4>
+        <h2 class="treats__title">Featured Treats</h2>
         
         <div class="treats__grid">
             <!-- 1枚目 -->
@@ -206,10 +203,13 @@
             <div class="footer__social">
                 <p class="footer__social-label">Follow us</p>
                 <div class="footer__social-icons">
-                    <img src="image/Group.png" alt="facebook" class="footer__icon">
-                    <img src="image/Vector.png" alt="pinterest" class="footer__icon">
-                    <img src="image/Vector1.png" alt="whatsapp" class="footer__icon">
-                    <img src="image/Group 503.png" alt="instagram" class="footer__icon">
+                    <a href="#" class="footer__social-link">
+                        <img src="image/Group.png" alt="Facebook" class="footer__icon">
+                        <img src="image/Vector.png" alt="pinterest" class="footer__icon">
+                        <img src="image/Vector1.png" alt="whatsapp" class="footer__icon">
+                        <img src="image/Group 503.png" alt="instagram" class="footer__icon">
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -266,12 +266,6 @@
 
     </div>
 </footer>
-    <!-- 
-
-        今回からかなり現場らしい書き方になりますが、まずは細かいこと気にしすぎず、どんどん書いてみましょう。
-        READMEファイルを見ながら進めてみてください。
-
-    -->
 
     
 
